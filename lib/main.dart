@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spothole/screens/homeScreen.dart';
 import './screens/splashScreen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +16,16 @@ class MyApp extends StatelessWidget {
       title: 'Spothole',
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: const Color(0xff1e0233),
+        primaryColor: const Color(0xff720e2d),
         textTheme: const TextTheme(
-          headline1: TextStyle(fontSize: 32, fontWeight: FontWeight.w600)
+          headline1: TextStyle(fontSize: 36, fontWeight: FontWeight.w500),
+          headline2: TextStyle(fontSize: 24, fontWeight: FontWeight.w500)
         ),
-        canvasColor: const Color(0xffe7d3cc),
-        backgroundColor: const Color(0xff342d50),
-        cardColor: const Color(0xff895575),
+        canvasColor: const Color(0xffd1ad96),
+        backgroundColor: const Color(0xff976741),
+        cardColor: const Color(0xffd69b3d),
+        accentColor: const Color(0xffdc6f76),
+        cursorColor: const Color(0xffd6023b)
       ),
       home: const SplashScreen(),
       routes: {

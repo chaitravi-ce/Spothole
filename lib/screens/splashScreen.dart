@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-      const Duration(seconds: 5), 
+      const Duration(seconds: 1), 
       () => Navigator.of(context).pushReplacementNamed(HomeScreen.routeName)
     );
     super.initState();
@@ -25,8 +25,24 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("FOtntomo"),
+    Size size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(children: [
+            SizedBox(width: size.width*0.1, ),
+          Image.asset("../../assets/SPOTHOLE.png", 
+            width: size.width*0.8, 
+            height: size.height*0.8,
+            fit: BoxFit.contain,
+          ),
+          ],)
+        ],
+      ),
     );
   }
 }
