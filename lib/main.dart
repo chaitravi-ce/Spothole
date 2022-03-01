@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spothole/screens/homeScreen.dart';
 import './screens/splashScreen.dart';
+import './screens/mapScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
       routes: {
         HomeScreen.routeName: (ctx) => const HomeScreen(),
+        MapScreen.routeName: (ctx) => const MapScreen()
       },
     );
   }

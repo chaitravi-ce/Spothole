@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../widgets/InfoWidget.dart';
+import './mapScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({ Key? key }) : super(key: key);
@@ -67,6 +68,30 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: Align(
+        alignment: const Alignment(0.92,0.92),
+        child: FloatingActionButton.extended(
+          onPressed: (){
+            print("Pressed");
+            Navigator.of(context).pushNamed(MapScreen.routeName);
+          },
+          extendedPadding: const EdgeInsets.all(30),
+          icon: const Icon(
+            Icons.location_on_rounded,
+            size: 30,
+            color: Color(0xffd6023b),
+          ),
+          label: Text(
+            "Open Map",
+            style: GoogleFonts.josefinSans(
+              textStyle: Theme.of(context).textTheme.headline2,
+              color: Theme.of(context).cursorColor,
+              fontSize: 20
+            ),
+          ),
+          tooltip: "Map to view Potholes",
+        ),
       ),
     );
   }

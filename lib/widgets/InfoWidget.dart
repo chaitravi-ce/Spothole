@@ -28,8 +28,9 @@ class InfoWidget extends StatelessWidget {
               style: GoogleFonts.josefinSans(
                 textStyle: Theme.of(context).textTheme.headline2,
                 color: Theme.of(context).backgroundColor,
-                fontSize: 40
-              )
+                fontSize: 42
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
           SizedBox(height: size.height*0.02,),
@@ -40,7 +41,8 @@ class InfoWidget extends StatelessWidget {
               style: GoogleFonts.josefinSans(
                 textStyle: Theme.of(context).textTheme.headline2,
                 color: Theme.of(context).backgroundColor
-              )
+              ),
+              textAlign: TextAlign.center,
             ),
           )
         ],
